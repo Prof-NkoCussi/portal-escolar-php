@@ -115,3 +115,15 @@ input:focus, select:focus, textarea:focus { outline: 3px solid var(--acento); ou
 .horario thead th { background: var(--azul); color: var(--blanco); }
 .horario tbody th { background: var(--azul-claro); color: var(--azul); white-space: nowrap; }   /* la hora no se corta */
 .horario tbody tr:nth-child(even) td { background: #FAFCFE; }   /* filas alternadas: se lee mejor */
+
+/* ---------- Contacto ---------- */
+.formulario { display: grid; gap: 14px; max-width: 560px; }
+.campo { display: grid; gap: 4px; }                 /* etiqueta arriba, campo abajo */
+.campo textarea { resize: vertical; }               /* se puede agrandar solo para abajo */
+.campo__error { margin: 0; color: #B91C1C; font-size: .9rem; font-weight: 600; }
+[aria-invalid="true"] { border-color: #B91C1C; background: #FFF7F7; }   /* el campo con error, en rojo */
+.formulario .boton { justify-self: start; }         /* el botón no ocupa todo el ancho */
+.aviso--ok { background: #E7F6EC; border-left-color: #15803D; }   /* verde: salió bien */
+.resumen { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 14px 0; }
+.resumen dt { font-weight: 700; color: var(--azul); }
+.resumen dd { margin: 0; overflow-wrap: anywhere; }  /* un email largo no rompe la tarjeta */
