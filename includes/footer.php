@@ -8,5 +8,7 @@
     <!-- date('Y') pone el año solo: no hay que cambiarlo cada enero -->
     <p>Proyecto de práctica · <?= date('Y') ?></p>
 </footer>
+<!-- el botón Imprimir de Secretaría; en las otras páginas no hace nada -->
+<script src="js/imprimir.js"></script>
 </body>
 </html>

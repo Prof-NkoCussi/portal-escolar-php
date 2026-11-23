@@ -54,3 +54,17 @@ function es_actual(string $archivo): string
     // si coincide, devuelve el atributo que usan el CSS y los lectores de pantalla
     return basename($_SERVER['SCRIPT_NAME']) === $archivo ? ' aria-current="page"' : '';
 }
+
+// siguiente_numero(): da el próximo número de constancia y lo deja guardado
+// Devuelve 0 si no pudo guardar (por ejemplo, Apache sin permiso en almacen/)
+function siguiente_numero(string $archivo): int
+{
+    // si el archivo existe, se lee el último número; si no, se arranca de 0
+    $ultimo = is_file($archivo) ? (int) file_get_contents($archivo) : 0;
+    $nuevo = $ultimo + 1;
+    // LOCK_EX: nadie más escribe el archivo mientras guardamos
+    if (file_put_contents($archivo, (string) $nuevo, LOCK_EX) === false) {
+        return 0;
+    }
+    return $nuevo;
+}

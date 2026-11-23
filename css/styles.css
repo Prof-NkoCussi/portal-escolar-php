@@ -127,3 +127,37 @@ input:focus, select:focus, textarea:focus { outline: 3px solid var(--acento); ou
 .resumen { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 14px 0; }
 .resumen dt { font-weight: 700; color: var(--azul); }
 .resumen dd { margin: 0; overflow-wrap: anywhere; }  /* un email largo no rompe la tarjeta */
+
+/* ---------- Secretaría: la constancia ---------- */
+.constancia {
+    position: relative; overflow: hidden;            /* la marca de agua no se sale de la hoja */
+    max-width: 720px; background: var(--blanco); color: #111;
+    border: 1px solid #C5D0DE; border-radius: 4px; padding: 32px 28px;
+    font-family: Georgia, "Times New Roman", serif;  /* letra de documento */
+    font-size: 1.05rem; line-height: 1.7;
+}
+.constancia::before {
+    content: "MODELO · SIN VALIDEZ OFICIAL";
+    position: absolute; inset: 0;                    /* ocupa toda la hoja */
+    display: grid; place-items: center;              /* texto al centro */
+    font-family: system-ui, sans-serif; font-weight: 800; white-space: nowrap;
+    font-size: clamp(1.2rem, 6vw, 2.3rem);           /* se achica en pantallas chicas */
+    color: rgba(185, 28, 28, .16);                   /* rojo casi transparente */
+    transform: rotate(-28deg);                       /* en diagonal */
+    pointer-events: none;                            /* no tapa los clics */
+}
+.constancia__num { text-align: right; font-size: .9rem; color: #555; margin-top: 0; }
+.constancia__escuela { text-align: center; font-weight: 700; margin-bottom: 0; }
+.constancia__titulo { text-align: center; text-transform: uppercase; letter-spacing: .06em; color: #111; font-family: inherit; }
+.constancia__pie { font-size: .85rem; color: #555; border-top: 1px solid #DDD; padding-top: 8px; margin-top: 28px; }
+.acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+
+/* ---------- Impresión: solo la constancia ---------- */
+@page { size: A4; margin: 2cm; }                             /* hoja A4 con márgenes de 2 cm */
+@media print {
+    .cabecera, .pie, .no-imprimir { display: none; }         /* fuera el menú, el pie y los botones */
+    body { background: #fff; }
+    .contenido { max-width: none; padding: 0; }
+    .constancia { border: 0; max-width: none; padding: 0; }
+    .constancia::before { print-color-adjust: exact; -webkit-print-color-adjust: exact; }   /* que se imprima la marca de agua */
+}
