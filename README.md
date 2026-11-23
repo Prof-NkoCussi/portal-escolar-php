@@ -120,4 +120,4 @@ curl -s "http://localhost/portal/horarios.php?curso=%3Cscript%3Ealert(1)%3C%2Fsc
 ## Licencia
 
 [MIT](https://github.com/Prof-NkoCussi/infraestructura-redes-lamp/blob/main/LICENSE) © Prof. Nicolás A. Cussi\
-Full Stack Developer • Data Science • AI
+*Full Stack Developer • Data Science • AI*
