@@ -1,0 +1,64 @@
+/* css/estilos.css — estilos del portal
+   Mobile first: primero se escribe para el celular y al final se ajusta para pantallas grandes */
+
+/* ---------- Colores y medidas, en un solo lugar ---------- */
+:root {
+    --azul: #1E3A5F;          /* azul del colegio: cabecera y títulos */
+    --azul-claro: #E8EEF6;    /* fondos y líneas suaves */
+    --acento: #0E7490;        /* turquesa: enlaces y botones */
+    --texto: #1F2937;         /* texto principal */
+    --gris: #5B6472;          /* texto secundario */
+    --fondo: #F4F7FB;         /* fondo de la página */
+    --blanco: #FFFFFF;
+    --radio: 10px;            /* esquinas redondeadas */
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }   /* el ancho incluye el relleno */
+body {
+    margin: 0;
+    font-family: system-ui, "Segoe UI", Roboto, sans-serif;   /* fuente del sistema: no se descarga nada */
+    line-height: 1.5;
+    color: var(--texto);
+    background: var(--fondo);
+}
+a { color: var(--acento); }
+h1, h2, h3 { color: var(--azul); line-height: 1.2; }
+
+/* ---------- Cabecera ---------- */
+.cabecera { background: var(--azul); color: var(--blanco); padding: 12px 16px; }
+.cabecera__marca { display: flex; align-items: center; gap: 12px; }
+.cabecera__sigla {
+    display: grid; place-items: center;       /* centra la sigla en el círculo */
+    width: 46px; height: 46px; border-radius: 50%;
+    background: var(--blanco); color: var(--azul); font-weight: 800; letter-spacing: .04em;
+}
+.cabecera__marca strong { display: block; font-size: 1.05rem; }
+.cabecera__marca span { font-size: .85rem; opacity: .85; }
+
+/* ---------- Menú ---------- */
+.menu { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }   /* si no entra, baja de renglón */
+.menu a {
+    color: var(--blanco); text-decoration: none;
+    padding: 6px 12px; border-radius: 999px;  /* forma de píldora */
+    background: rgba(255, 255, 255, .12);
+}
+.menu a:hover { background: rgba(255, 255, 255, .25); }
+/* la página abierta (aria-current lo pone es_actual() en PHP) */
+.menu a[aria-current="page"] { background: var(--blanco); color: var(--azul); font-weight: 700; }
+
+/* ---------- Contenido ---------- */
+.contenido { max-width: 960px; margin: 0 auto; padding: 20px 16px 40px; }   /* centrado y con aire */
+
+/* ---------- Tarjetas ---------- */
+.tarjeta { background: var(--blanco); border-radius: var(--radio); padding: 16px; box-shadow: 0 1px 4px rgba(30, 58, 95, .12); }
+
+/* ---------- Pie ---------- */
+.pie { text-align: center; color: var(--gris); font-size: .9rem; padding: 20px 16px; border-top: 1px solid var(--azul-claro); }
+.pie p { margin: 4px 0; }
+
+/* ---------- Pantallas grandes (desde 760 px) ---------- */
+@media (min-width: 760px) {
+    .cabecera { display: flex; justify-content: space-between; align-items: center; padding: 14px 32px; }
+    .menu { margin-top: 0; }   /* el menú pasa a la derecha de la marca */
+}
