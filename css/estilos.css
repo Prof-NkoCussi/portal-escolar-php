@@ -76,3 +76,14 @@ h1, h2, h3 { color: var(--azul); line-height: 1.2; }
 @media (min-width: 760px) {
     .grilla { grid-template-columns: 1fr 1fr; }      /* en pantalla grande, de a dos */
 }
+
+/* ---------- Especialidades ---------- */
+.especialidad { margin-bottom: 16px; }
+.especialidad h2 { margin-top: 0; }
+.anios {
+    display: grid; gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));   /* tantas columnas como entren, de 190 px o más */
+}
+.anio { background: var(--azul-claro); border-radius: 8px; padding: 10px 12px; }
+.anio h3 { margin: 0 0 6px; font-size: 1rem; }
+.anio ul { margin: 0; padding-left: 18px; }   /* la sangría de la lista */

@@ -30,3 +30,27 @@ $novedades = [
         'texto'     => 'El cronograma de mesas de examen ya está publicado en la cartelera de cada curso.',
     ],
 ];
+
+// Especialidades: array de arrays de arrays (tres niveles)
+// especialidad → sus datos → materias por año → lista de materias
+$especialidades = [
+    'basico' => [                                   // la clave sirve de id en la página
+        'nombre'      => 'Ciclo Básico Técnico',
+        'descripcion' => 'Formación común de 1° a 3° año, con talleres para conocer cada área.',
+        'materias'    => [
+            1 => ['Matemática', 'Lengua y Literatura', 'Taller de Tecnología'],   // año => materias
+            2 => ['Matemática', 'Física', 'Taller de Electricidad'],
+            3 => ['Matemática', 'Química', 'Taller de Informática'],
+        ],
+    ],
+    'programacion' => [
+        'nombre'      => 'Técnico en Programación',
+        'descripcion' => 'Ciclo superior de 4° a 7° año: desarrollo de software, bases de datos y redes.',
+        'materias'    => [
+            4 => ['Programación I', 'Software I', 'Hardware I'],
+            5 => ['Programación II', 'Base de Datos I', 'Redes I'],
+            6 => ['Programación III', 'Base de Datos II', 'Redes II'],
+            7 => ['Programación IV', 'Taller de Ingeniería', 'Práctica Profesionalizante'],
+        ],
+    ],
+];
