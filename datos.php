@@ -54,3 +54,41 @@ $especialidades = [
         ],
     ],
 ];
+
+// Módulos del turno mañana (horas cátedra de 40 minutos)
+$modulos = ['07:45 a 08:25', '08:25 a 09:05', '09:15 a 09:55', '09:55 a 10:35'];
+
+// Horarios: curso → nombre y días → materias de cada módulo, en orden
+// La clave ('4-1') es lo que viaja en la URL: horarios.php?curso=4-1
+$horarios = [
+    '4-1' => [
+        'nombre' => '4° 1ª',
+        'dias'   => [
+            'Lunes'     => ['Programación I', 'Programación I', 'Matemática', 'Lengua'],
+            'Martes'    => ['Software I', 'Software I', 'Inglés', 'Matemática'],
+            'Miércoles' => ['Hardware I', 'Hardware I', 'Lengua', 'Educación Física'],
+            'Jueves'    => ['Programación I', 'Matemática', 'Software I', 'Inglés'],
+            'Viernes'   => ['Hardware I', 'Lengua', 'Programación I', 'Programación I'],
+        ],
+    ],
+    '5-1' => [
+        'nombre' => '5° 1ª',
+        'dias'   => [
+            'Lunes'     => ['Base de Datos I', 'Base de Datos I', 'Inglés', 'Matemática'],
+            'Martes'    => ['Programación II', 'Programación II', 'Redes I', 'Redes I'],
+            'Miércoles' => ['Matemática', 'Lengua', 'Base de Datos I', 'Inglés'],
+            'Jueves'    => ['Redes I', 'Redes I', 'Programación II', 'Lengua'],
+            'Viernes'   => ['Programación II', 'Matemática', 'Base de Datos I', 'Educación Física'],
+        ],
+    ],
+    '7-1' => [
+        'nombre' => '7° 1ª',
+        'dias'   => [
+            'Lunes'     => ['Programación IV', 'Programación IV', 'Inglés', 'Inglés'],
+            'Martes'    => ['Taller de Ingeniería', 'Taller de Ingeniería', 'Matemática', 'Lengua'],
+            'Miércoles' => ['Práctica Profesionalizante', 'Práctica Profesionalizante', 'Práctica Profesionalizante', 'Práctica Profesionalizante'],
+            'Jueves'    => ['Programación IV', 'Taller de Ingeniería', 'Matemática', 'Lengua'],
+            'Viernes'   => ['Programación IV', 'Programación IV', 'Taller de Ingeniería', 'Educación Física'],
+        ],
+    ],
+];

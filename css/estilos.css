@@ -87,3 +87,31 @@ h1, h2, h3 { color: var(--azul); line-height: 1.2; }
 .anio { background: var(--azul-claro); border-radius: 8px; padding: 10px 12px; }
 .anio h3 { margin: 0 0 6px; font-size: 1rem; }
 .anio ul { margin: 0; padding-left: 18px; }   /* la sangría de la lista */
+
+/* ---------- Formularios y botones (los usan Horarios, Contacto y Secretaría) ---------- */
+label { font-weight: 700; color: var(--azul); }
+input, select, textarea {
+    font: inherit;                                   /* la misma letra que el resto de la página */
+    padding: 8px 10px; border: 2px solid #C5D0DE; border-radius: 8px; background: var(--blanco);
+}
+input:focus, select:focus, textarea:focus { outline: 3px solid var(--acento); outline-offset: 1px; }
+.boton {
+    font: inherit; font-weight: 700; cursor: pointer;
+    color: var(--blanco); background: var(--acento);
+    border: 0; border-radius: 8px; padding: 9px 18px;
+}
+.boton:hover { background: var(--azul); }
+
+/* ---------- Avisos ---------- */
+.aviso { background: var(--azul-claro); border-left: 5px solid var(--acento); border-radius: 8px; padding: 10px 14px; }
+.aviso--error { background: #FDECEC; border-left-color: #B91C1C; }    /* rojo: algo salió mal */
+
+/* ---------- Horarios ---------- */
+.tarjeta > h2:first-child { margin-top: 0; }           /* sin espacio de más arriba del título */
+.filtro { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 16px; }
+.tabla-scroll { overflow-x: auto; }                  /* la tabla se desplaza de costado si no entra */
+.horario { width: 100%; border-collapse: collapse; min-width: 620px; font-size: .92rem; }
+.horario th, .horario td { border: 1px solid var(--azul-claro); padding: 8px; text-align: left; }
+.horario thead th { background: var(--azul); color: var(--blanco); }
+.horario tbody th { background: var(--azul-claro); color: var(--azul); white-space: nowrap; }   /* la hora no se corta */
+.horario tbody tr:nth-child(even) td { background: #FAFCFE; }   /* filas alternadas: se lee mejor */
