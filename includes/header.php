@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- $titulo lo definió la página que hizo el require -->
     <title><?= e($titulo) ?> · Portal C.T.P. "Olga B. de Arko"</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <header class="cabecera">
