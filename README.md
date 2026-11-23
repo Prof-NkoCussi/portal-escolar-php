@@ -117,6 +117,7 @@ curl -s "http://localhost/portal/horarios.php?curso=%3Cscript%3Ealert(1)%3C%2Fsc
 - Los mensajes de contacto se validan y se muestran, pero no se guardan ni se envían por correo.
 - No hay usuarios ni login: cualquiera puede generar un modelo de constancia, por eso no tiene validez.
 
----
+## Licencia
 
-**Prof. Nicolás A. Cussi**
+[MIT](https://github.com/Prof-NkoCussi/infraestructura-redes-lamp/blob/main/LICENSE) © Prof. Nicolás A. Cussi\
+Full Stack Developer • Data Science • AI
