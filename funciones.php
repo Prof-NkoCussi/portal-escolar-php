@@ -39,6 +39,14 @@ function fecha_larga(): string
     return date('j') . ' de ' . $meses[(int) date('n')] . ' de ' . date('Y');
 }
 
+// fecha_corta(): pasa '2026-11-27' (formato de MySQL) a '27/11/2026'
+function fecha_corta(string $iso): string
+{
+    // strtotime() convierte el texto en un timestamp (segundos desde 1970)
+    // y date() le da formato a ese momento, en vez de usar "ahora"
+    return date('d/m/Y', strtotime($iso));
+}
+
 // es_actual(): marca en el menú la página que se está viendo
 function es_actual(string $archivo): string
 {
