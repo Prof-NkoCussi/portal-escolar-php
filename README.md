@@ -1,8 +1,26 @@
-# Portal escolar en PHP · C.T.P. "Olga B. de Arko"
+# Portal Escolar · C.T.P. "Olga B. de Arko"
 
-Portal web hecho en **PHP puro**, sin frameworks ni base de datos: novedades, especialidades, horarios por curso, formulario de contacto y un **generador de constancias docentes** listo para imprimir.
+<!-- TECNOLOGÍAS -->
+![PHP](https://img.shields.io/badge/PHP-Puro-777BB4?logo=php&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?logo=javascript&logoColor=black)
 
-> **Proyecto de práctica.** Las novedades, materias, horarios y constancias son **datos de ejemplo**. Las constancias salen con la marca de agua *"MODELO · SIN VALIDEZ OFICIAL"*, sin firma ni sello.
+<!-- CARACTERÍSTICAS -->
+![Responsive](https://img.shields.io/badge/Design-Responsive-2E8B57)
+![Framework](https://img.shields.io/badge/Framework-Sin%20frameworks-blue)
+![Database](https://img.shields.io/badge/Database-Sin%20base%20de%20datos-lightgrey)
+![Print](https://img.shields.io/badge/Constancias-Print%20Ready-217346)
+
+## Descripción
+
+Portal web institucional desarrollado para el **Colegio Técnico Provincial (C.T.P.) "Olga B. de Arko"**, orientado a centralizar y presentar información relevante de la comunidad educativa.
+
+Desarrollado con **PHP puro**, CSS3 y JavaScript, sin utilizar frameworks ni sistemas de gestión de bases de datos.
+
+Incluye secciones de **novedades institucionales**, especialidades, horarios organizados por curso y un formulario de contacto. Incorpora además un **generador de constancias docentes**, con formato preparado para impresión.
+
+> **Proyecto de práctica.** Las novedades, materias, horarios y constancias utilizan datos de ejemplo. Las constancias generadas incluyen la marca de agua "MODELO · SIN VALIDEZ OFICIAL", sin firma ni sello institucional.
 
 ## Demo
 
