@@ -24,13 +24,25 @@ Incluye secciones de **novedades institucionales**, especialidades, horarios org
 
 ## Demo
 
-| Inicio | Especialidades |
-|---|---|
-| ![Inicio: novedades generadas con foreach](docs/demo/inicio.gif) | ![Especialidades: materias por año con array de arrays](docs/demo/especialidades.gif) |
-| **Horarios** | **Contacto** |
-| ![Horarios: curso elegido por GET y lista blanca](docs/demo/horarios.gif) | ![Contacto: formulario POST validado en el servidor](docs/demo/contacto.gif) |
-| **Secretaría · Constancias** | |
-| ![Constancias: switch, fecha, número correlativo e impresión](docs/demo/constancias.gif) | |
+**Inicio**
+
+![Inicio: novedades generadas con foreach](docs/demo/inicio.gif)
+
+**Especialidades**
+
+![Especialidades: materias por año con array de arrays](docs/demo/especialidades.gif)
+
+**Horarios**
+
+![Horarios: curso elegido por GET y lista blanca](docs/demo/horarios.gif)
+
+**Contacto**
+
+![Contacto: formulario POST validado en el servidor](docs/demo/contacto.gif)
+
+**Secretaría · Constancias**
+
+![Constancias: switch, fecha, número correlativo e impresión](docs/demo/constancias.gif)
 
 GitHub no ejecuta PHP: la demo en vivo corre en un servidor Linux con Apache (más abajo, cómo instalarlo).
 
